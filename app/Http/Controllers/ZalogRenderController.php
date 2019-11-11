@@ -4,6 +4,8 @@
 	namespace App\Http\Controllers;
 
 	use Illuminate\Http\Request;
+	use Illuminate\Support\Facades\Log;
+	use Mockery\Exception;
 	use setasign\Fpdi\PdfReader;
 	use setasign\Fpdi\Fpdi;
 
@@ -349,7 +351,7 @@
 		 * @param string $text
 		 * @param int    $limit
 		 */
-		private function fillCell(float $x, float $y, string $text, int $limit = 30)
+		private function fillCell(float $x, float $y, $text, int $limit = 30)
 		{
 
 			$this->pdf->SetFont('fillfont', '', 14);
@@ -359,7 +361,14 @@
 
 //        $txt = mb_convert_encoding($txt, "cp1252", "UTF-8");
 
+			try {
 			$txt = iconv('UTF-8', 'ISO-8859-16//TRANSLIT', $text);
+
+			}
+			catch (Exception $exception) {
+				Log::warning("Unable to convert input: [$text] " . $exception->getMessage());
+				$txt = $text;
+			}
 
 			if ($this->setUppercase) {
 				$txt = strtoupper($txt);
