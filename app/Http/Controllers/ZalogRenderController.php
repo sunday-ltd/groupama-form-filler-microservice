@@ -262,7 +262,7 @@
 				$this->fillCell(183.5, 172.8, $data["biztositott"]["szuletes"]["nap"], 2);
 
 				// Anyja neve
-				$this->fillCell(51, 177.9, $data["biztositott"]["anyja_neve"], 30);
+				$this->fillCell(51, 177.9, $data["biztositott"]["anyjaneve"], 30);
 
 				/*************************************************************
 				 * 4. Szerződő adatai
@@ -302,7 +302,7 @@
 				$this->fillCell(183.5, 212.3, $data["szerzodo"]["szuletes"]["nap"], 2);
 
 				// Anyja neve
-				$this->fillCell(51, 217.4, $data["szerzodo"]["anyja_neve"], 30);
+				$this->fillCell(51, 217.4, $data["szerzodo"]["anyjaneve"], 30);
 
 				$this->pdf->addPage();
 				$importedPageSize = $this->pdf->getImportedPageSize($page1);
