@@ -190,22 +190,22 @@
 				$this->fillCell(183.5, 64, $data["ados"]["ingatlan"]["ajto"], 2);
 
 				// Ingatlan címe HELYRAJZI SZÁM KÖZTERÜLET NEVE
-				$this->fillCell(51, 69, $data["ados"]["ingatlan"]["helyrajzi_szam"], 30);
+				$this->fillCell(51, 69, $data["ados"]["ingatlan"]["helyrajziszam"], 30);
 
 				// Alapterület
 				$this->fillCell(51, 74, $data["ados"]["ingatlan"]["alapterulet"], 4);
 
 				// Jelzálog jogosultja
-				$this->fillCell(61, 79.1, $data["ados"]["ingatlan"]["jelzalog_jogosult"], 28);
+				$this->fillCell(61, 79.1, $data["ados"]["ingatlan"]["jelzalogjogosult"], 28);
 
 				// Kölcsönszerződés száma
-				$this->fillCell(61, 84.1, $data["ados"]["ingatlan"]["kolcsonszerzodes_szama"], 28);
+				$this->fillCell(61, 84.1, $data["ados"]["ingatlan"]["kolcsonszerzodesszama"], 28);
 
 				// Kölcsönszerződés tartalma
-				$this->fillCell(61, 89.2, $data["ados"]["ingatlan"]["kolcsonszerzodes_tartalma"], 28);
+				$this->fillCell(61, 89.2, $data["ados"]["ingatlan"]["kolcsonszerzodestartalma"], 28);
 
 				// Kölcsön összege
-				$this->fillCell(61, 95, $data["ados"]["ingatlan"]["kolcson_osszege"], 9);
+				$this->fillCell(61, 95, $data["ados"]["ingatlan"]["kolcsonosszege"], 9);
 
 
 				/*************************************************************
@@ -213,16 +213,16 @@
 				 ************************************************************/
 
 				// Biztosítás neve 1
-				$this->fillCell(51.3, 122.8, $data["ados"]["szerzodes"]["biztositas_neve_1"], 3);
+				$this->fillCell(51.3, 122.8, $data["ados"]["szerzodes"]["biztositasneve1"], 3);
 
 				// Biztosítás neve 2
-				$this->fillCell(70.6, 122.8, $data["ados"]["szerzodes"]["biztositas_neve_2"], 26);
+				$this->fillCell(70.6, 122.8, $data["ados"]["szerzodes"]["biztositasneve2"], 26);
 
 				// Biztosítási ajánlat/szerződés száma
-				$this->fillCell(70.6, 127.9, $data["ados"]["szerzodes"]["szerzodes_szama"], 26);
+				$this->fillCell(70.6, 127.9, $data["ados"]["szerzodes"]["szerzodesszama"], 26);
 
 				// Épület biztosítási összege
-				$this->fillCell(61, 138.2, $data["ados"]["szerzodes"]["biztositasi_osszeg"], 9);
+				$this->fillCell(61, 138.2, $data["ados"]["szerzodes"]["biztositasiosszeg"], 9);
 
 				/*************************************************************
 				 * 3. Biztosított adatai

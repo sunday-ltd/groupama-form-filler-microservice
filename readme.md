@@ -9,6 +9,7 @@ _Note: this project's public/index.php file had been modified to run better in W
 
 ## Webservice
 **POST** for `/render/zalogkotelezettinyilatkozat` with the following array structure encoded in JSON to receive a filled PDF copy of 'Groupama: NYILATKOZAT BIZTOSÍTÁSI SZERZŐDÉSHEZ' form.
+Use the data key to pass the JSON string. 
 ```php
 $data = [
     'ados' => [
@@ -19,18 +20,18 @@ $data = [
             'utcaszam' => "9",
             'emelet' => "",
             'ajto' => "A",
-            'helyrajzi_szam' => "123/456/789",
+            'helyrajziszam' => "123/456/789",
             'alapterulet' => "180",
-            'jelzalog_jogosult' => "Gerő Gábor",
-            'kolcsonszerzodes_szama' => "85489731963",
-            'kolcsonszerzodes_tartalma' => "4189498465",
-            'kolcson_osszege' => "69420420"
+            'jelzalogjogosult' => "Gerő Gábor",
+            'kolcsonszerzodesszama' => "85489731963",
+            'kolcsonszerzodestartalma' => "4189498465",
+            'kolcsonosszege' => "69420420"
         ],
         'szerzodes' => [
-            'biztositas_neve_1' => "826",
-            'biztositas_neve_2' => "Társasház bizt",
-            'szerzodes_szama' => "BŐŰ-912247",
-            'biztositasi_osszeg' => "70250000",
+            'biztositasneve1' => "826",
+            'biztositasneve2' => "Társasház bizt",
+            'szerzodesszama' => "BŐŰ-912247",
+            'biztositasiosszeg' => "70250000",
         ]
     ],
     'biztositott' => [
@@ -47,7 +48,7 @@ $data = [
             "ho" => "03",
             "nap" => "03",
         ],
-        'anyja_neve' => "Posteiner Nóra",
+        'anyjaneve' => "Posteiner Nóra",
     ],
     'szerzodo' => [
         'nev' => "Molnár Bálint",
@@ -63,7 +64,7 @@ $data = [
             "ho" => "03",
             "nap" => "03",
         ],
-        'anyja_neve' => "Posteiner Nóra",
+        'anyjaneve' => "Posteiner Nóra",
     ],
     'bank' => [
         'folyosito' => "Budapest Bank",
