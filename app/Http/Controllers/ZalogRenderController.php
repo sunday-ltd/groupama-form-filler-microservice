@@ -362,7 +362,7 @@
 //        $txt = mb_convert_encoding($txt, "cp1252", "UTF-8");
 
 			try {
-			$txt = iconv('UTF-8', 'ISO-8859-16//TRANSLIT', $text);
+			    $txt = iconv('UTF-8', 'ISO-8859-16//TRANSLIT', $text);
 
 			}
 			catch (Exception $exception) {
@@ -371,7 +371,12 @@
 			}
 
 			if ($this->setUppercase) {
-				$txt = strtoupper($txt);
+			    if (function_exists('mb_strtoupper')) {
+			        $txt = mb_strtoupper($txt);
+                }
+			    else {
+                    $txt = strtoupper($txt);
+                }
 			}
 
 			$txt = (substr($txt, 0, $limit));

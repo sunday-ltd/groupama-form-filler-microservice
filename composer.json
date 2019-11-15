@@ -10,7 +10,9 @@
         "setasign/fpdf": "^1.8",
         "setasign/fpdi": "^2.2",
         "symfony/polyfill-iconv": "^1.12",
-        "symfony/polyfill-mbstring": "^1.12"
+        "symfony/polyfill-mbstring": "^1.12",
+        "ext-json": "*",
+        "ext-iconv": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
