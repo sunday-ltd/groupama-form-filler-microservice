@@ -351,7 +351,7 @@
 		 * @param string $text
 		 * @param int    $limit
 		 */
-		private function fillCell(float $x, float $y, $text, int $limit = 30)
+		private function fillCell(float $x, float $y, $txt, int $limit = 30)
 		{
 
 			$this->pdf->SetFont('fillfont', '', 14);
@@ -361,8 +361,16 @@
 
 //        $txt = mb_convert_encoding($txt, "cp1252", "UTF-8");
 
+            if ($this->setUppercase) {
+                if (function_exists('mb_strtoupper')) {
+                    $txt = mb_strtoupper($txt);
+                }
+                else {
+                    $txt = strtoupper($txt);
+                }
+            }
 			try {
-			    $txt = iconv('UTF-8', 'ISO-8859-16//TRANSLIT', $text);
+			    $txt = iconv('UTF-8', 'ISO-8859-16//TRANSLIT', $txt);
 
 			}
 			catch (Exception $exception) {
@@ -370,14 +378,6 @@
 				$txt = $text;
 			}
 
-			if ($this->setUppercase) {
-			    if (function_exists('mb_strtoupper')) {
-			        $txt = mb_strtoupper($txt);
-                }
-			    else {
-                    $txt = strtoupper($txt);
-                }
-			}
 
 			$txt = (substr($txt, 0, $limit));
 
