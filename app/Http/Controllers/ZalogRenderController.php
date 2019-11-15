@@ -238,7 +238,7 @@
 				$this->fillCell(75.5, 162.6, $data["biztositott"]["telepules"], 25);
 
 				// Cím közterület neve
-				$this->fillCell(51, 167.7, $data["biztositott"]["utcanev"], 14);
+				$this->fillCell(51, 167.7, $data["biztositott"]["utcanev"], 15);
 
 				// Cím utcaszám
 				$this->fillCell(139.5, 167.7, $data["biztositott"]["utcaszam"], 3);
@@ -278,7 +278,7 @@
 				$this->fillCell(75.5, 202.1, $data["szerzodo"]["telepules"], 25);
 
 				// Cím közterület neve
-				$this->fillCell(51, 207.2, $data["szerzodo"]["utcanev"], 14);
+				$this->fillCell(51, 207.2, $data["szerzodo"]["utcanev"], 15);
 
 				// Cím utcaszám
 				$this->fillCell(139.5, 207.2, $data["szerzodo"]["utcaszam"], 3);
