@@ -27,7 +27,7 @@ class ZalogRenderController extends Controller
             dd($e);
         }
 
-        $this->setUppercase = false;
+        $this->setUppercase = true;
 
     }
 
