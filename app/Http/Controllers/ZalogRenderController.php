@@ -5,7 +5,6 @@
 
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\Log;
-	use Mockery\Exception;
 	use setasign\Fpdi\PdfReader;
 	use setasign\Fpdi\Fpdi;
 
